@@ -22,14 +22,19 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/usuarios/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .when('/login', {
-        templateUrl: 'views/login.html',
+        templateUrl: 'views/usuarios/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login'
+      })
+      .when('/comentarios/listado', {
+        templateUrl: 'views/comentarios/comentarios.html',
+        controller: 'ComentariosCtrl',
+        controllerAs: 'comentarios'
       })
       .otherwise({
         redirectTo: '/'

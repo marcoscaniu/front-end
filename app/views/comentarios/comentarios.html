@@ -1,0 +1,16 @@
+ <!--vista de los comentarios -->
+ <section>
+ <div  data-ng-controller="ComentarioController" data-ng-init="find()">
+                <table class="table table-hover table-responsive" style="background-color:white;">
+                    <h1 class="bg-primary" align="center"><b>Mira lo que esta pasando</b></h1>
+                    <tr data-ng-repeat="comentario in comentarios">  
+                    <Td> 
+                        <b></b>comento:
+                        </Td><hr>
+                        <td>
+                        {{comentario.descripcion}}
+                     </Td>
+                        </tr>  
+                </table>
+        </div>
+</section>
