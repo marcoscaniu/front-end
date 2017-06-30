@@ -1,21 +1,26 @@
-<section>
-	<form>
-		<table align="center">
+<section style="background-color: rgba(255,255,255,0.7);" >
+<body >
+	<form id="form1">
+		<table align="center" ng-controller="controlpaso"> 
 			<tr>
-				<td>Ingreso de usuarios</td>
+				<td><b><h2 >Ingreso de usuarios</h2></b></td>
 			</tr>
 			<tr>
-				<td>Nombre usuario:</td>
-				<td><input type="text="" placeholder="Usuario o correo electronico" name=""></td>
+				<td><b>Usuario:</b></td>
+				<td><input  class="form-control " type="text="" placeholder="Usuario o correo electronico" ng-model="texto"></td>
 			</tr>
 			<tr>
-				<td>Contraseña:</td>
-				<td><input type="password" placeholder="Contraseña" name=""></td>
+				<td><b>Contraseña:</b></td>
+				<td><input  class="form-control" type="password" placeholder="Contraseña"></td>
 			</tr>
 			<tr>
-				<td><input type="submit" name="ok" value="Ingresar"></td>
-				<td><a href="#">No tienes una cuenta? Registrate</td>
+				<td><input class="btn btn-info" type="submit" value="Ingresar" ng-click="verificaUsuario()"></td>
+				<td><a href="#">No tienes una cuenta? Registrate</a></td>
 			</tr>
+			<label>{{error}}</label>
 		</table>
+		
 	</form>
+	<br></br>
+</body>
 </section>
