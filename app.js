@@ -26,7 +26,20 @@ var app=angular
         controller: 'controlpaso',
 
       })
-      .when('/comentarios/listado', {
+       .when('/agregar-comentario', {
+        templateUrl: 'views/comentarios/create-comentarios.html',
+        controller: 'ComentarioController',
+      })
+      .when('/ver-comentario/:id', {
+        templateUrl: 'views/comentarios/edit-comentarios.html',
+        controller: 'ComentarioController',
+      })
+      .when('/login', {
+        templateUrl: 'views/comentarios/list-comentarios.html',
+        controller: 'ComentariosCtrl',
+        controllerAs: 'comentarios'
+      })
+      .when('/comentarios', {
         templateUrl: 'views/comentarios/list-comentarios.html',
         controller: 'ComentarioController',
       })

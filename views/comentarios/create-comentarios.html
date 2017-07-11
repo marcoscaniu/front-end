@@ -1,0 +1,16 @@
+<section ng-controller="ComentarioController" style="background-color: rgba(255,255,255,0.7);">
+    <form ng-submit="create()">
+        <table align="center">
+            <tr>
+                <td><h2>Agrega tu comentario aca!!</h2></td>
+            </tr>
+            <tr>
+                <td><textarea placeholder="Deja tu comentario" ng-model="comentario.descripcion" name="descripcion"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="Comentar" value="Comentar" class="btn btn-success"></td>
+            </tr>
+        </table>
+    </form>
+    <br></br>
+</section>
