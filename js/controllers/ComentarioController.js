@@ -10,28 +10,19 @@ app.controller('ComentarioController', ["$scope", "$routeParams", "$location", "
 				console.log(err);
 			});
 		}
-		$scope.ver = (id) => {
-			$location.path("/ver-comentario/"+id);
-			// ComentarioService.getById({ _id: id }).then((resp) => {
-			// 	$scope.comentarios = resp.data;
-			// 	$location.path("/ver-comentario/"+id);
-			// 	console.log(resp.data);
-			// }).catch((err) => {
-			// 	console.log(err);
-			// });
-		}
+		
 	}
-	// $scope.findOne = function () {
+	$scope.findOne = function () {
 
-	// 	ComentarioService.getById({ _id: $routeParams.id }).then((resp) => {
-	// 		$scope.comentarios = resp.data;
+		ComentarioService.getById({ _id: $routeParams.id }).then((resp) => {
+			$scope.comentarios = resp.data;
 
-	// 		console.log(resp.data);
-	// 	}).catch((err) => {
-	// 		console.log(err);
-	// 	});
-	// 	//return $scope.comentarios;
-	// };
+			console.log(resp.data);
+		}).catch((err) => {
+			console.log(err);
+		});
+		//return $scope.comentarios;
+	};
 	$scope.create = function () {
 		ComentarioService.save(this.comentario).then((resp) => {
 			$location.path('/comentarios');

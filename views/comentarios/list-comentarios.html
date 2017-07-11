@@ -4,7 +4,7 @@
         <tr ng-repeat="comentario in comentarios">
             <td>usuario <b>????</b> comento: </td>
             <td><textarea ng-bind="comentario.descripcion"></textarea></td>
-            <td><a class="btn btn-info" ng-click="ver(comentario._id,comentario.descripcion)">Eliminar</a></td>
+            <td><a ng-href="#!/ver-comentario/{{comentario._id}}" class="btn btn-info" >ver</a></td>
 
             <td><a class="btn btn-danger" ng-click="eliminar(comentario._id, $index)">Eliminar</a></td>
         </tr>
